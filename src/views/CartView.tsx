@@ -44,7 +44,7 @@ export function CartView({ cart, onUpdateQty, onRemove, subtotal, tax, total }: 
                       <h3 className="text-lg font-bold">{item.name}</h3>
                       <p className="text-on-surface-variant text-sm font-medium">{item.color} / {item.size}</p>
                     </div>
-                    <span className="text-lg font-bold text-primary">${item.price.toFixed(2)}</span>
+                    <span className="text-lg font-bold text-primary">ETB {item.price.toFixed(2)}</span>
                   </div>
                   <div className="mt-6 flex justify-between items-center">
                     <div className="flex items-center bg-surface-container rounded-full px-2 py-1">
@@ -65,12 +65,12 @@ export function CartView({ cart, onUpdateQty, onRemove, subtotal, tax, total }: 
             <div className="bg-surface-container-low rounded-[2rem] p-6 shadow-xl border border-outline-variant/20">
               <h2 className="text-xl font-semibold tracking-tight mb-6 text-on-surface">Order Summary</h2>
               <div className="space-y-5 mb-6">
-                <div className="flex justify-between text-sm text-on-surface-variant"><span>Subtotal</span><span className="font-semibold text-on-surface">${subtotal.toFixed(2)}</span></div>
+                <div className="flex justify-between text-sm text-on-surface-variant"><span>Subtotal</span><span className="font-semibold text-on-surface">ETB {subtotal.toFixed(2)}</span></div>
                 <div className="flex justify-between text-sm text-on-surface-variant"><span>Shipping</span><span className="font-semibold text-green-700">Free</span></div>
-                <div className="flex justify-between text-sm text-on-surface-variant"><span>Tax</span><span className="font-semibold text-on-surface">${tax.toFixed(2)}</span></div>
+                <div className="flex justify-between text-sm text-on-surface-variant"><span>Tax</span><span className="font-semibold text-on-surface">ETB {tax.toFixed(2)}</span></div>
               </div>
               <div className="h-px bg-gradient-to-r from-transparent via-outline-variant/40 to-transparent mb-6" />
-              <div className="flex justify-between items-end mb-8"><span className="text-base text-on-surface-variant">Total</span><span className="text-4xl font-bold tracking-tight text-primary">${total.toFixed(2)}</span></div>
+              <div className="flex justify-between items-end mb-8"><span className="text-base text-on-surface-variant">Total</span><span className="text-4xl font-bold tracking-tight text-primary">ETB {total.toFixed(2)}</span></div>
               <button className="w-full h-14 rounded-full bg-primary text-white font-semibold text-base shadow-lg shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2">
                 Checkout <ArrowRight size={18} />
               </button>

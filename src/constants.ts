@@ -4,7 +4,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '1',
     name: 'Terra Core Leggings',
-    price: 88.00,
+    price: 7850.00,
     category: 'Yoga',
     color: 'Forest Green',
     size: 'M',
@@ -17,7 +17,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '2',
     name: 'Vantage Sports Bra',
-    price: 54.00,
+    price: 5400.00,
     category: 'Training',
     color: 'Sage Green',
     size: 'S',
@@ -29,7 +29,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '3',
     name: 'Breathe Rib Tank',
-    price: 42.00,
+    price: 5150.00,
     category: 'Yoga',
     color: 'Cloud White',
     size: 'M',
@@ -41,7 +41,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '4',
     name: 'Apex Biker Shorts',
-    price: 62.00,
+    price: 6900.00,
     category: 'HIIT',
     color: 'Onyx',
     size: 'S',
@@ -53,7 +53,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '5',
     name: 'Pace Runners',
-    price: 140.00,
+    price: 12500.00,
     category: 'Running',
     color: 'Sand',
     size: '8',
@@ -65,7 +65,7 @@ export const PRODUCTS: Product[] = [
   {
     id: '6',
     name: 'Aero Training Jacket',
-    price: 110.00,
+    price: 8200.00,
     category: 'Training',
     color: 'Midnight Blue',
     size: 'L',

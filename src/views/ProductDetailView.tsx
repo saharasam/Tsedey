@@ -39,7 +39,7 @@ export function ProductDetailView({ product, onAddToCart, onBack }: ProductDetai
               <span className="inline-block px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold tracking-widest uppercase mb-4">New Drop</span>
               <h2 className="text-4xl font-headline font-bold tracking-tight mb-2">{product.name}</h2>
               <div className="flex items-baseline gap-4">
-                <span className="text-2xl font-headline font-bold text-primary">${product.price.toFixed(2)}</span>
+                <span className="text-2xl font-headline font-bold text-primary">ETB {product.price.toFixed(2)}</span>
                 <div className="flex items-center gap-1 text-secondary">
                   <Star size={14} fill="currentColor" />
                   <span className="text-sm font-medium">{product.rating} ({product.reviews} reviews)</span>

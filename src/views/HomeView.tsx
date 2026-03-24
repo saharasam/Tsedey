@@ -34,7 +34,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
         {/* Hero text — left on mobile, centered on desktop */}
         <div className="absolute bottom-12 lg:bottom-0 lg:inset-0 left-0 right-0 px-6 flex flex-col items-start lg:items-center lg:justify-center gap-4 z-10 max-w-7xl mx-auto lg:text-center">
           <div className="flex flex-col gap-2 max-w-2xl lg:items-center">
-            <span className="text-[10px] uppercase tracking-[0.3em] text-white/70 font-semibold">New Collection 2025</span>
+            {/* <span className="text-[10px] uppercase tracking-[0.3em] text-white/70 font-semibold">New Collection 2025</span> */}
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-headline font-bold text-white leading-[1.05] tracking-tight">
               Designed for movement.
             </h1>
@@ -80,7 +80,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
               <span className="text-[10px] uppercase tracking-[0.3em] text-secondary-container mb-2 block">Premium Drop</span>
               <h4 className="text-white text-xl font-bold">{PRODUCTS[0].name}</h4>
               <div className="flex items-center justify-between mt-2">
-                <span className="text-white font-medium">${PRODUCTS[0].price.toFixed(2)}</span>
+                <span className="text-white font-medium">ETB {PRODUCTS[0].price.toFixed(2)}</span>
                 <span className="bg-primary text-white text-[10px] px-3 py-1 rounded-full uppercase font-bold tracking-widest">New</span>
               </div>
             </div>
@@ -90,7 +90,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
             <img src="/Featured2.jpg" alt="Featured Style" className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10">
               <h5 className="text-white text-sm font-bold truncate">{PRODUCTS[1].name}</h5>
-              <p className="text-white/90 text-xs mt-1 font-medium">${PRODUCTS[1].price.toFixed(2)}</p>
+              <p className="text-white/90 text-xs mt-1 font-medium">ETB {PRODUCTS[1].price.toFixed(2)}</p>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
             <img src="/Featured3.jpg" alt="Featured Style" className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" referrerPolicy="no-referrer" />
             <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10">
               <h5 className="text-white text-sm font-bold truncate">{PRODUCTS[4].name}</h5>
-              <p className="text-white/90 text-xs mt-1 font-medium">${PRODUCTS[4].price.toFixed(2)}</p>
+              <p className="text-white/90 text-xs mt-1 font-medium">ETB {PRODUCTS[4].price.toFixed(2)}</p>
             </div>
           </div>
         </div>

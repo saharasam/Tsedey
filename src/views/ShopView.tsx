@@ -86,7 +86,7 @@ const ProductCard: React.FC<{ product: Product, onNavigate: (p: Product) => void
         <h3 className="text-sm font-medium leading-tight line-clamp-2">{product.name}</h3>
         <p className="text-[11px] text-on-surface-variant">{product.category}</p>
         <div className="pt-0.5">
-          <span className="text-base font-semibold tracking-tight">${product.price.toFixed(2)}</span>
+          <span className="text-base font-semibold tracking-tight">ETB {product.price.toFixed(2)}</span>
         </div>
       </div>
     </div>
