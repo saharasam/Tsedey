@@ -235,7 +235,7 @@ function HomeView({ onNavigate }: { onNavigate: (p: Product) => void }) {
         </div>
         <div className="flex overflow-x-auto hide-scrollbar gap-6 snap-x snap-mandatory">
           <CategoryCard 
-            title="Yoga" 
+            title="Sleek" 
             image="/Trending1.jpg" 
           />
           <CategoryCard 
