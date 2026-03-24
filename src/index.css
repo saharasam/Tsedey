@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Syne", sans-serif;
+  --font-body: "Inter", sans-serif;
+  
+  --color-primary: #2e7d32;
+  --color-primary-container: #388e3c;
+  --color-on-primary: #ffffff;
+  
+  --color-secondary: #76c043;
+  --color-secondary-container: #a8d44c;
+  --color-on-secondary-container: #1b3000;
+  
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-container: #e8f5e9;
+  --color-surface-container-low: #f1f8e9;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-on-surface: #1b1c1b;
+  --color-on-surface-variant: #37474f;
+  --color-outline-variant: #cfd8dc;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface font-body antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
