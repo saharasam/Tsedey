@@ -35,13 +35,13 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
         <img
           src="/hero.png"
           alt="Hero"
-          className="hidden lg:block absolute inset-0 w-1200 h-240 object-cover object-center"
+          className="hidden lg:block absolute inset-0 w-1000 h-220 object-cover object-center"
           referrerPolicy="no-referrer"
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute bottom-0 left-0 right-0 h-15 bg-gradient-to-t from-background via-background/10 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-7 bg-gradient-to-t from-background via-background/10 to-transparent pointer-events-none" />
 
         {/* Hero text */}
         <div className="absolute bottom-12 lg:bottom-0 lg:inset-0 left-0 right-0 px-6 flex flex-col items-start lg:items-center lg:justify-center gap-4 z-10 max-w-7xl mx-auto lg:text-center">
