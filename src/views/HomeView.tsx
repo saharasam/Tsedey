@@ -17,27 +17,35 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
       className="flex flex-col"
     >
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative h-[70vh] lg:h-screen w-full overflow-hidden">
-        <picture className="absolute inset-0 w-400 h-230">
-          <source media="(min-width: 1024px)" srcSet="/hero.png" />
-          <img 
-            src="/hero_mobile.png" 
-            onError={(e) => {
-              e.currentTarget.src = "https://lh3.googleusercontent.com/aida-public/AB6AXuBt-NNDAsy-TMJKrH3qGdlHomHDJiRaZbsdC_y1VEjqu1Ahb2GArOGX7isJgkqvig4Zgdf5w859aI7o20I9tSKb62VqxmfJ_n7l-4LF8KdThX-c6LriWRde-HJ6PLO0QFWypvpsTIm89Hk0u1fyue8lWrqJg4bGv6Cywtdvh7yCQcJJCmUheIAiAtbhcBuBvDBE0zoVFEvB1cilCZ6p4wotFtLxrGM-a2KnvbTBMAuZxbdYwVgPyoLjV1idb_guqST305arV2U7yRU";
-            }}
-            alt="Hero" 
-            className="absolute inset-0 w-full h-full object-cover object-center lg:object" 
-            referrerPolicy="no-referrer"
-          />
-        </picture>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent" />
+      {/* Mobile: natural height, full image visible. Desktop: full-screen cover */}
+      <section className="relative w-full lg:h-screen lg:overflow-hidden">
+        
+        {/* Mobile image — flows naturally, not absolutely positioned */}
+        <img
+          src="/hero_mobile.png"
+          onError={(e) => {
+            e.currentTarget.src = "https://lh3.googleusercontent.com/aida-public/AB6AXuBt-NNDAsy-TMJKrH3qGdlHomHDJiRaZbsdC_y1VEjqu1Ahb2GArOGX7isJgkqvig4Zgdf5w859aI7o20I9tSKb62VqxmfJ_n7l-4LF8KdThX-c6LriWRde-HJ6PLO0QFWypvpsTIm89Hk0u1fyue8lWrqJg4bGv6Cywtdvh7yCQcJJCmUheIAiAtbhcBuBvDBE0zoVFEvB1cilCZ6p4wotFtLxrGM-a2KnvbTBMAuZxbdYwVgPyoLjV1idb_guqST305arV2U7yRU";
+          }}
+          alt="Hero"
+          className="w-full h-auto block lg:hidden"
+          referrerPolicy="no-referrer"
+        />
+
+        {/* Desktop image — fills full screen */}
+        <img
+          src="/hero.png"
+          alt="Hero"
+          className="hidden lg:block absolute inset-0 w-1200 h-240 object-cover object-center"
+          referrerPolicy="no-referrer"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent pointer-events-none" />
         <div className="absolute bottom-0 left-0 right-0 h-15 bg-gradient-to-t from-background via-background/10 to-transparent pointer-events-none" />
 
-        {/* Hero text — left on mobile, centered on desktop */}
+        {/* Hero text */}
         <div className="absolute bottom-12 lg:bottom-0 lg:inset-0 left-0 right-0 px-6 flex flex-col items-start lg:items-center lg:justify-center gap-4 z-10 max-w-7xl mx-auto lg:text-center">
           <div className="flex flex-col gap-2 max-w-2xl lg:items-center">
-            {/* <span className="text-[10px] uppercase tracking-[0.3em] text-white/70 font-semibold">New Collection 2025</span> */}
             <h1 className="text-4xl md:text-5xl lg:text-7xl font-headline font-bold text-white leading-[1.05] tracking-tight">
               Designed for movement.
             </h1>
@@ -46,7 +54,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
             </p>
           </div>
           <div className="flex items-center gap-4 mt-2">
-            <button 
+            <button
               className="bg-[#b7d854] text-black px-8 py-4 rounded-full font-headline font-bold uppercase tracking-widest text-xs shadow-xl hover:opacity-95 transition-all active:scale-95"
               onClick={onShop}
             >
@@ -90,8 +98,8 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
               isHero: true,
               gridClass: "col-span-2 lg:col-span-2 lg:row-span-2",
               aspectClass: "aspect-[4/5] lg:aspect-square",
-              // Tweak these parameters to adjust framing and text
-              objectPosition: "center 10%", 
+              // Hero should be center-contained for 100% visibility
+              objectPosition: "center", 
               textY: "bottom-8" 
             },
             { 
@@ -123,7 +131,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
               <img 
                 src={item.image} 
                 alt={item.product.name} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out lg:group-hover:scale-105" 
+                className={`absolute inset-0 w-full h-full ${item.isHero ? 'object-contain' : 'object-cover'} transition-transform duration-1000 ease-out lg:group-hover:scale-105`} 
                 style={{ objectPosition: item.objectPosition }}
                 referrerPolicy="no-referrer" 
               />
