@@ -18,15 +18,18 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
     >
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative h-[70vh] lg:h-screen w-full overflow-hidden">
-        <img 
-          src="/hero.png" 
-          onError={(e) => {
-            e.currentTarget.src = "https://lh3.googleusercontent.com/aida-public/AB6AXuBt-NNDAsy-TMJKrH3qGdlHomHDJiRaZbsdC_y1VEjqu1Ahb2GArOGX7isJgkqvig4Zgdf5w859aI7o20I9tSKb62VqxmfJ_n7l-4LF8KdThX-c6LriWRde-HJ6PLO0QFWypvpsTIm89Hk0u1fyue8lWrqJg4bGv6Cywtdvh7yCQcJJCmUheIAiAtbhcBuBvDBE0zoVFEvB1cilCZ6p4wotFtLxrGM-a2KnvbTBMAuZxbdYwVgPyoLjV1idb_guqST305arV2U7yRU";
-          }}
-          alt="Hero" 
-          className="absolute inset-0 w-full h-full object-cover"
-          referrerPolicy="no-referrer"
-        />
+        <picture className="absolute inset-0 w-400 h-230">
+          <source media="(min-width: 1024px)" srcSet="/hero.png" />
+          <img 
+            src="/hero_mobile.png" 
+            onError={(e) => {
+              e.currentTarget.src = "https://lh3.googleusercontent.com/aida-public/AB6AXuBt-NNDAsy-TMJKrH3qGdlHomHDJiRaZbsdC_y1VEjqu1Ahb2GArOGX7isJgkqvig4Zgdf5w859aI7o20I9tSKb62VqxmfJ_n7l-4LF8KdThX-c6LriWRde-HJ6PLO0QFWypvpsTIm89Hk0u1fyue8lWrqJg4bGv6Cywtdvh7yCQcJJCmUheIAiAtbhcBuBvDBE0zoVFEvB1cilCZ6p4wotFtLxrGM-a2KnvbTBMAuZxbdYwVgPyoLjV1idb_guqST305arV2U7yRU";
+            }}
+            alt="Hero" 
+            className="absolute inset-0 w-full h-full object-cover object-center lg:object-[75%_center]" 
+            referrerPolicy="no-referrer"
+          />
+        </picture>
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-30 bg-gradient-to-t from-background via-background/30 to-transparent pointer-events-none" />
