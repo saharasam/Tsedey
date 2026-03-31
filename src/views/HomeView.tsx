@@ -120,7 +120,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
               aspectClass: "aspect-square lg:aspect-auto lg:h-full",
               // Tweak these parameters to adjust framing and text
               objectPosition: "center 15%", 
-              textY: "top-8" 
+              textY: "bottom-8" 
             }
           ].map((item, idx) => (
             <div 
