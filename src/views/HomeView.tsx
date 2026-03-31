@@ -17,7 +17,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
       className="flex flex-col"
     >
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative h-[70vh] lg:h-screen w-full overflow-hidden">
+      <section className="relative h-[70vh] lg:h-screen w-500 overflow-hidden">
         <picture className="absolute inset-0 w-400 h-200">
           <source media="(min-width: 1024px)" srcSet="/hero.png" />
           <img 
