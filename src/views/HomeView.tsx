@@ -17,8 +17,8 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
       className="flex flex-col"
     >
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative h-[70vh] lg:h-screen w-500 overflow-hidden">
-        <picture className="absolute inset-0 w-400 h-200">
+      <section className="relative h-[70vh] lg:h-screen w-full overflow-hidden">
+        <picture className="absolute inset-0 w-400 h-230">
           <source media="(min-width: 1024px)" srcSet="/hero.png" />
           <img 
             src="/hero_mobile.png" 
@@ -32,7 +32,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
         </picture>
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-background via-background/10 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-15 bg-gradient-to-t from-background via-background/10 to-transparent pointer-events-none" />
 
         {/* Hero text — left on mobile, centered on desktop */}
         <div className="absolute bottom-12 lg:bottom-0 lg:inset-0 left-0 right-0 px-6 flex flex-col items-start lg:items-center lg:justify-center gap-4 z-10 max-w-7xl mx-auto lg:text-center">
@@ -90,8 +90,8 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
               isHero: true,
               gridClass: "col-span-2 lg:col-span-2 lg:row-span-2",
               aspectClass: "aspect-[4/5] lg:aspect-square",
-              // Tweak these parameters to adjust framing and text
-              objectPosition: "center 10%", 
+              // Hero should be center-contained for 100% visibility
+              objectPosition: "center", 
               textY: "bottom-8" 
             },
             { 
@@ -123,7 +123,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
               <img 
                 src={item.image} 
                 alt={item.product.name} 
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out lg:group-hover:scale-105" 
+                className={`absolute inset-0 w-full h-full ${item.isHero ? 'object-contain' : 'object-cover'} transition-transform duration-1000 ease-out lg:group-hover:scale-105`} 
                 style={{ objectPosition: item.objectPosition }}
                 referrerPolicy="no-referrer" 
               />
