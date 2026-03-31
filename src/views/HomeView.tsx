@@ -18,7 +18,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
     >
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="relative h-[70vh] lg:h-screen w-full overflow-hidden">
-        <picture className="absolute inset-0 w-300 h-230">
+        <picture className="absolute inset-0 w-300 h-220">
           <source media="(min-width: 1024px)" srcSet="/hero.png" />
           <img 
             src="/hero_mobile.png" 
