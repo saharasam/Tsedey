@@ -82,7 +82,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div className="max-w-xl">
             <h3 className="text-3xl lg:text-4xl font-headline font-bold tracking-tight mb-2">Featured Elements</h3>
-            <p className="text-muted-foreground font-medium">Curated pieces from our latest high-performance drop.</p>
+            {/* <p className="text-muted-foreground font-medium">Curated pieces from our latest high-performance drop.</p> */}
           </div>
           <button className="hidden md:block text-xs font-bold uppercase tracking-[0.2em] px-6 py-3 border border-primary/20 rounded-full hover:bg-primary/5 transition-colors">
             View Collection
