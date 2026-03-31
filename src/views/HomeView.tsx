@@ -98,8 +98,8 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
               isHero: true,
               gridClass: "col-span-2 lg:col-span-2 lg:row-span-2",
               aspectClass: "aspect-[4/5] lg:aspect-square",
-              // Hero should be center-contained for 100% visibility
-              objectPosition: "center", 
+              // Changed back to 'center 10%' to fill the frame but keep framing
+              objectPosition: "center 10%", 
               textY: "bottom-8" 
             },
             { 
@@ -131,7 +131,7 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
               <img 
                 src={item.image} 
                 alt={item.product.name} 
-                className={`absolute inset-0 w-full h-full ${item.isHero ? 'object-contain' : 'object-cover'} transition-transform duration-1000 ease-out lg:group-hover:scale-105`} 
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out lg:group-hover:scale-105" 
                 style={{ objectPosition: item.objectPosition }}
                 referrerPolicy="no-referrer" 
               />
