@@ -89,9 +89,9 @@ export function HomeView({ onNavigate, onShop }: HomeViewProps) {
               image: "/Featured1.jpg", 
               isHero: true,
               gridClass: "col-span-2 lg:col-span-2 lg:row-span-2",
-              aspectClass: "aspect-square",
+              aspectClass: "aspect-[4/5] lg:aspect-square",
               // Tweak these parameters to adjust framing and text
-              objectPosition: "center", 
+              objectPosition: "center 10%", 
               textY: "bottom-8" 
             },
             { 
